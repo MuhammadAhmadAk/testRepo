@@ -1,16 +1,8 @@
 // ignore_for_file: prefer_final_fields
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
-import 'package:testapp/account.dart';
-import 'package:testapp/files.dart';
-import 'package:testapp/home.dart';
-import 'package:testapp/key.dart';
 import 'package:testapp/routes.dart';
-import 'package:testapp/search.dart';
-import 'package:testapp/wallet.dart';
-
 class NavbarScreen extends StatefulWidget {
   const NavbarScreen({super.key});
 
@@ -42,12 +34,12 @@ class _NavbarScreenState extends State<NavbarScreen> {
       ),
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: ItemAnimationProperties(
+      itemAnimationProperties: const ItemAnimationProperties(
         // Navigation Bar's items animation properties.
         duration: Duration(milliseconds: 200),
         curve: Curves.ease,
       ),
-      screenTransitionAnimation: ScreenTransitionAnimation(
+      screenTransitionAnimation: const ScreenTransitionAnimation(
         // Screen transition animation on change of selected tab.
         animateTabTransition: true,
         curve: Curves.ease,
@@ -98,31 +90,31 @@ class _NavbarScreenState extends State<NavbarScreen> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
+        icon: const Icon(CupertinoIcons.home),
         title: "Home",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.search),
+        icon: const Icon(CupertinoIcons.search),
         title: "Search",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.cube_box),
+        icon: const Icon(CupertinoIcons.cube_box),
         title: "Wallet",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.scissors),
+        icon: const Icon(CupertinoIcons.scissors),
         title: "Key",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.person),
+        icon: const Icon(CupertinoIcons.person),
         title: "Account",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,

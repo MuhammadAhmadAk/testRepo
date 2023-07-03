@@ -13,16 +13,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SafeArea(
           child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Home"),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/files');
-                },
-                child: Text("Go to file"))
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Home"),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/files');
+                  },
+                  child: Text("Go to file"))
+            ],
+          ),
         ),
       )),
     );
